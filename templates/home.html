@@ -1,0 +1,24 @@
+
+
+<form action="home" method="post">
+        {% csrf_token %}
+
+        <div class="container">
+          <h1>Welcome to Dream11</h1>
+          <hr>
+          <label for="name"><b>Enter your Name</b></label>
+          <input type="text" placeholder="Enter Your Name" name="name" required>
+      
+          <label for="email"><b>Enter your Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="player_name"><b>Predict Player</b></label>
+          <input type="text" placeholder="Enter Email" name="player_name" required>
+      
+          <hr>
+      
+          <button onclick="location.href='{% url 'home' %}'" type="submit" class="home">Predict</button>
+        </div>
+        
+        
+      </form>
