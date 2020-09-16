@@ -76,18 +76,18 @@ WSGI_APPLICATION = 'dream11.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
- ##       'ENGINE': 'django.db.backends.postgresql',
- #       'NAME': 'postgres',
-  #      'USER':'postgres',
-  #      'PASSWORD':'Nithin123',
-  #      'HOST':'localhost',
-  #      'PORT':5432
-  #       }
-#}
+# DATABASES = {
+#   'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'postgres',
+#         'USER':'postgres',
+#         'PASSWORD':'Nithin123',
+#         'HOST':'localhost',
+#         'PORT':5432
+#       }
+# }
 DATABASES={
-    'default':dj_database_url.config()
+   'default':dj_database_url.config()
 }
 
 # Password validation
@@ -126,8 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, 'static',),
+)
+
 STATIC_URL = '/static/'
-
-
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
+#STATIC_ROOT=os.path.join(BASE_DIR,'static')
 django_heroku.settings(locals())

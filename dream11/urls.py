@@ -19,6 +19,6 @@ from drm11 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name='home'),
+    path('',views.first,name='first'),
     path('home',views.home,name='home'),
 ]
