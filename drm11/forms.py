@@ -3,11 +3,24 @@ from .models import prediction_new,prediction_archive_new
 
 
 
+
 class PredForm(forms.Form):
+    FILTER_CHOICES= [
+  ('Chennai Super Kings','Chennai Super Kings'),
+('Delhi Capitals','Delhi Capitals'),
+('Kings XI Punjab','Kings XI Punjab'),
+('Kolkata Knight Riders','Kolkata Knight Riders'),
+('Mumbai Indians','Mumbai Indians'),
+('Royal Challengers Bangalore','Royal Challengers Bangalore'),
+('Rajasthan Royals','Rajasthan Royals'),
+('Sunrisers Hyderabad','Sunrisers Hyderabad'),
+    ]
+
     name = forms.CharField(label='name', max_length=100 ,required=True)
     email = forms.CharField(label='email', max_length=100,required=True)
-    team_name=forms.CharField(label='team_name', max_length=100,required=True)
+    team_name=forms.ChoiceField(choices = FILTER_CHOICES)
     player_name=forms.CharField(label='player_name', max_length=100,required=True)
+
 
     def clean(self):
         cleaned_data = self.cleaned_data

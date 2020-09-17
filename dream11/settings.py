@@ -76,19 +76,19 @@ WSGI_APPLICATION = 'dream11.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#   'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'postgres',
-#         'USER':'postgres',
-#         'PASSWORD':'Nithin123',
-#         'HOST':'localhost',
-#         'PORT':5432
-#       }
-# }
-DATABASES={
-   'default':dj_database_url.config()
+DATABASES = {
+  'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'postgres',
+        'USER':'postgres',
+        'PASSWORD':'Nithin123',
+        'HOST':'localhost',
+        'PORT':5432
+      }
 }
+# DATABASES={
+#    'default':dj_database_url.config()
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

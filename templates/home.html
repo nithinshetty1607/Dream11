@@ -61,9 +61,20 @@
       </div>
       
       <div class="form__group">
-          <input type="text" placeholder="Who will win the match?" name="team_name" class="form__input" required/>
+        <select class="form__input" id="id_team_name" name="team_name" required>
+          <option selected disabled selected>Select Team</option>
+          <option value="Chennai Super Kings" >Chennai Super Kings</option>
+          <option value="Delhi Capitals">Delhi Capitals</option>
+          <option value="Kings XI Punjab">Kings XI Punjab</option>
+          <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+          <option value="Mumbai Indians">Mumbai Indians</option>
+          <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+          <option value="Rajasthan Royals">Rajasthan Royals</option>
+          <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        </select>
       </div>
       <div class="form__group">
+          
         <input type="text" placeholder="Who will be the Man of the Match?" name="player_name" class="form__input" required/>
     </div>
       
